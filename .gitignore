@@ -1,0 +1,48 @@
+# Dependencies
+node_modules
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Hardhat files
+/cache
+/artifacts
+
+# TypeChain files
+/typechain
+/typechain-types
+
+# solidity-coverage files
+/coverage
+/coverage.json
+
+# Hardhat Ignition deployments (all chains)
+ignition/deployments/chain-*
+
+# Editor directories and files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea
+*.swp
+*.swo
+*~
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
