@@ -1,13 +1,55 @@
-# Sample Hardhat Project
+# MOOCChain Contracts
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+Smart contracts for MOOCChain blockchain MOOC platform, built with Hardhat and Solidity.
 
-Try running some of the following tasks:
+## Tech Stack
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
+- **Framework**: Hardhat 2.x
+- **Language**: Solidity 0.8.20
+- **Testing**: TypeScript, Chai, Hardhat Toolbox
+- **Deployment**: Hardhat Ignition
+- **Compiler**: Optimized with IR-based compilation (runs: 200)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- npm
+- Local blockchain node (geth) running on `http://127.0.0.1:8888`
+
+### Installation
+
+```bash
+npm install
 ```
+
+### Compile
+
+```bash
+npm run compile
+```
+
+### Test
+
+```bash
+npm run test
+```
+
+### Deploy
+
+Start your local blockchain node first, then:
+
+```bash
+npm run deploy
+```
+
+## Scripts
+
+- `npm run compile` - Compile Solidity contracts
+- `npm run test` - Run test suite
+- `npm run deploy` - Deploy contracts to localhost network
+
+## License
+
+MIT
