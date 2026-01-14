@@ -41,14 +41,28 @@ npm run test
 Start your local blockchain node first, then:
 
 ```bash
+# Deploy ResourceNFT contract
 npm run deploy
 ```
+
+### Sync to Frontend
+
+After deploying the contract, sync the ABI and address to the frontend:
+
+```bash
+npm run sync
+```
+
+This will automatically:
+- Copy the contract ABI to `moocchain-web/src/contracts/Contracts.json`
+- Generate contract addresses file at `moocchain-web/src/contracts/contractAddresses.ts`
 
 ## Scripts
 
 - `npm run compile` - Compile Solidity contracts
 - `npm run test` - Run test suite
 - `npm run deploy` - Deploy contracts to localhost network
+- `npm run sync` - Sync contract ABI and addresses to frontend project
 
 ## License
 
