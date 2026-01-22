@@ -3,8 +3,10 @@
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",
-    "deploy": "hardhat ignition deploy ignition/modules/ResourceNFT.ts --network localhost --reset",
-    "sync": "node scripts/sync-contracts.js"
+    "deploy:ResourceNFT": "hardhat ignition deploy ignition/modules/ResourceNFT.ts --network localhost --reset",
+    "deploy:CertificateNFT": "hardhat ignition deploy ignition/modules/CertificateNFT.ts --network localhost --reset",
+    "sync:ResourceNFT": "node scripts/sync-resource-contracts.js",
+    "sync:CertificateNFT": "node scripts/sync-certificate-contracts.js"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
