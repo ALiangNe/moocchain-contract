@@ -5,12 +5,17 @@
     "test": "hardhat test",
     "deploy:ResourceNFT": "hardhat ignition deploy ignition/modules/ResourceNFT.ts --network localhost --reset",
     "deploy:CertificateNFT": "hardhat ignition deploy ignition/modules/CertificateNFT.ts --network localhost --reset",
+    "deploy:MOOCToken": "hardhat ignition deploy ignition/modules/MOOCToken.ts --network localhost --reset",
     "sync:ResourceNFT": "node scripts/sync-resource-contracts.js",
-    "sync:CertificateNFT": "node scripts/sync-certificate-contracts.js"
+    "sync:CertificateNFT": "node scripts/sync-certificate-contracts.js",
+    "sync:MOOCToken": "node scripts/sync-mooc-token-contracts.js"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "@openzeppelin/contracts": "^4.9.6",
     "hardhat": "^2.28.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
   }
 }

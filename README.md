@@ -42,27 +42,60 @@ Start your local blockchain node first, then:
 
 ```bash
 # Deploy ResourceNFT contract
-npm run deploy
+npm run deploy:ResourceNFT
+
+# Deploy CertificateNFT contract
+npm run deploy:CertificateNFT
+
+# Deploy MOOCToken ERC20 contract
+npm run deploy:MOOCToken
 ```
 
 ### Sync to Frontend
 
-After deploying the contract, sync the ABI and address to the frontend:
+After deploying the contracts, sync the ABI and addresses to the frontend:
 
 ```bash
-npm run sync
+# Sync ResourceNFT contract
+npm run sync:ResourceNFT
+
+# Sync CertificateNFT contract
+npm run sync:CertificateNFT
+
+# Sync MOOCToken contract
+npm run sync:MOOCToken
 ```
 
 This will automatically:
-- Copy the contract ABI to `moocchain-web/src/contracts/Contracts.json`
+- Copy the contract ABI files to `moocchain-web/src/contracts/`
 - Generate contract addresses file at `moocchain-web/src/contracts/contractAddresses.ts`
+
+## Contracts
+
+### ResourceNFT
+ERC721 NFT contract for course resources. Each resource is minted as a unique NFT.
+
+### CertificateNFT
+ERC721 NFT contract for course certificates. Certificates are minted as NFTs upon course completion.
+
+### MOOCToken
+ERC20 token contract for the MOOCChain platform. Used for rewarding users and purchasing course resources.
 
 ## Scripts
 
+### Compilation & Testing
 - `npm run compile` - Compile Solidity contracts
 - `npm run test` - Run test suite
-- `npm run deploy` - Deploy contracts to localhost network
-- `npm run sync` - Sync contract ABI and addresses to frontend project
+
+### Deployment
+- `npm run deploy:ResourceNFT` - Deploy ResourceNFT contract to localhost
+- `npm run deploy:CertificateNFT` - Deploy CertificateNFT contract to localhost
+- `npm run deploy:MOOCToken` - Deploy MOOCToken ERC20 contract to localhost
+
+### Synchronization
+- `npm run sync:ResourceNFT` - Sync ResourceNFT ABI and address to frontend
+- `npm run sync:CertificateNFT` - Sync CertificateNFT ABI and address to frontend
+- `npm run sync:MOOCToken` - Sync MOOCToken ABI and address to frontend
 
 ## License
 
